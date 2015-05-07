@@ -1,0 +1,25 @@
+{
+  "name": "listento-emitter",
+  "description": "Simple function lifecycle hooks",
+  "homepage": "https://github.com/krambuhl/listento-emitter",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tape tests/*.js | tap-spec",
+    "build": "babel ./source -o ./dist/index.js",
+    "develop": "babel ./source -w -o ./dist/index.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:krambuhl/listento-emitter.git"
+  },
+  "devDependencies": {
+    "babel": "^5.2.5",
+    "tap-spec": "^2.1.2",
+    "tape": "^3.0.3"
+  },
+  "dependencies": {
+    "kombini": "^0.1.0"
+  }
+}
