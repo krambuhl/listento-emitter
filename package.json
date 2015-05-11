@@ -3,7 +3,7 @@
   "description": "Mixin for event-emitter inversion of control listen functions",
   "homepage": "https://github.com/krambuhl/listento-emitter",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "tape tests/*.js | tap-spec",
     "build": "babel ./source -o ./dist/index.js",
