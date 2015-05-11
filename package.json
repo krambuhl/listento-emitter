@@ -2,8 +2,9 @@
   "name": "listento-emitter",
   "description": "Mixin for event-emitter inversion of control listen functions",
   "homepage": "https://github.com/krambuhl/listento-emitter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "test": "tape tests/*.js | tap-spec"
   },
@@ -13,6 +14,8 @@
   },
   "devDependencies": {
     "babel": "^5.2.5",
+    "event-emitter": "^0.3.3",
+    "extend": "^2.0.1",
     "tap-spec": "^2.1.2",
     "tape": "^3.0.3"
   }
