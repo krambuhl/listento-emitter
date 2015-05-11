@@ -20,6 +20,6 @@
     "tape": "^3.0.3"
   },
   "dependencies": {
-    "kombini": "^0.1.0"
+    "kombini": "^0.1.1"
   }
 }
