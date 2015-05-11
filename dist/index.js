@@ -1,16 +1,6 @@
-'use strict';
+"use strict";
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _kombini = require('kombini');
-
-var _kombini2 = _interopRequireDefault(_kombini);
-
-exports['default'] = _kombini2['default'].extend({
+module.exports = {
   setupListeners: function setupListeners() {
     this._listeningTo = [];
   },
@@ -44,7 +34,7 @@ exports['default'] = _kombini2['default'].extend({
 
     return this;
   }
-});
+};
 
 function matches(chk, match) {
   for (var key in match) if (match[key] !== undefined && chk[key] !== match[key]) return false;
@@ -54,4 +44,3 @@ function matches(chk, match) {
 function createListener(obj, events, cb) {
   return { obj: obj, events: events, cb: cb };
 }
-module.exports = exports['default'];

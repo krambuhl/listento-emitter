@@ -1,27 +1,25 @@
-import Kombini from 'kombini';
-
-export default Kombini.extend({
-  setupListeners() {
+module.exports = {
+  setupListeners: function() {
     this._listeningTo = [];
   },
 
-  cleanupListeners() {
-    this.stopListening()
+  cleanupListeners: function() {
+    this.stopListening();
   },
 
-  listenTo(obj, events, cb) {
+  listenTo: function(obj, events, cb) {
     this._listeningTo.push(createListener(obj, events, cb));
     obj.on(events, cb);
     return this;
   },
 
-  listenOnce(obj, events, cb) {
+  listenOnce: function(obj, events, cb) {
     this._listeningTo.push(createListener(obj, events, cb));
     obj.once(events, cb);
     return this;
   },
 
-  stopListening(obj, events, cb) {
+  stopListening: function(obj, events, cb) {
     var removal = [];
     this._listeningTo = this._listeningTo.filter(function (listener) {
       if (!matches(listener, createListener(obj, events, cb))) return true;
@@ -34,7 +32,7 @@ export default Kombini.extend({
 
     return this;
   }
-});
+};
 
 function matches(chk, match) {
   for (var key in match)
