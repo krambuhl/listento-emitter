@@ -1,7 +1,13 @@
 import Kombini from 'kombini';
 
 export default Kombini.extend({
-  _listeningTo: [],
+  setupListeners() {
+    this._listeningTo = [];
+  },
+
+  cleanupListeners() {
+    this.stopListening()
+  },
 
   listenTo(obj, events, cb) {
     this._listeningTo.push(createListener(obj, events, cb));

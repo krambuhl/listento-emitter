@@ -1,6 +1,6 @@
 {
   "name": "listento-emitter",
-  "description": "Simple function lifecycle hooks",
+  "description": "Mixin for event-emitter inversion of control listen functions",
   "homepage": "https://github.com/krambuhl/listento-emitter",
   "version": "0.1.0",
   "main": "dist/index.js",
@@ -20,6 +20,6 @@
     "tape": "^3.0.3"
   },
   "dependencies": {
-    "kombini": "^0.1.1"
+    "kombini": "^0.1.0"
   }
 }
