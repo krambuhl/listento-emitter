@@ -4,10 +4,7 @@ var extend = require('extend');
 var test = require('tape');
 
 
-function TestClass() {
-  this.setupListeners();
-}
-
+function TestClass() { this.setupListeners(); }
 extend(TestClass.prototype, EventEmitter, ListenTo);
 
 test('object.listenTo(obj, ev, cb)', function (t) {
